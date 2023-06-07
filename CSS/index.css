@@ -1,0 +1,50 @@
+/*主页推荐书籍展示框*/
+main a{
+    width: 160px;
+    height: 250px;
+    margin: 30px;
+    padding: auto;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    float: left;
+}
+
+/*主页推荐书籍封面图片*/
+main a img{
+    width: 160px;
+    height: 230px;
+    border-radius: 5px;
+    float: left;
+}
+
+/*悬浮时上升效果*/
+main a:hover{
+    position: relative;
+    transform: translateY(-5px);
+    transition: all 0.5s;
+}
+main img:hover{
+    transition: all 0.5s;
+    box-shadow: 0 26px 50px -24px rgb(0 36 100 / 50%);
+}
+
+/*栏目名*/
+#recommendation{
+    text-align: left;
+    margin: 10px 10px 10px 25px;
+}
+#article{
+    text-align: left;
+    margin: 10px 10px 10px 20px;
+}
+
+/*书名*/
+.title{
+    font-size: 1em;
+}
+
+#test{
+    margin: 10px 0 10px 0;
+}

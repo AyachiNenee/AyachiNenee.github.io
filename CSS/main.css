@@ -1,11 +1,17 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     overflow-x: hidden;
-    background-color: whitesmoke;
+    background-color: white;
 }
-main{
-    margin: 750px;
+
+main {
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }

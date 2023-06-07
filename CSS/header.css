@@ -6,7 +6,7 @@ header{
 header ul{
     list-style-type: none;
     overflow: hidden;
-    background-color:whitesmoke;
+    background-color:#eaecef;
     border-bottom: 1px solid gainsboro;
 }
 header li{
