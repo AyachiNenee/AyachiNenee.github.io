@@ -8,6 +8,7 @@
 
 /*主页书籍展示框*/
 .book {
+    display: block;
     width: 160px;
     height: 250px;
     margin: 5px 30px 5px 30px;
