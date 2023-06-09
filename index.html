@@ -28,18 +28,18 @@
     </header>
 
     <main>
-        
+
         <div class="container">
             <div class="row">
                 <img src="./Images/ban2.png" id="test">
             </div>
         </div>
 
-        <div class="container">
+        <div class="container main-box">
             <div class="row">
-                <div class="col-lg-7 col-sm-12">
+                <div class="col-lg-7 col-sm-12 col-box" id="q1">
                     <h2 id="recommendation">首页推荐</h2>
-                    <a href="#" class="book"><img src="./Images/books/book01.jpg" class="">
+                    <a href="#" class="book"><img src="./Images/books/book01.jpg">
                         <h2 class="title">三体</h2>
                     </a>
                     <a href="#" class="book"><img src="./Images/books/book02.jpg">
@@ -64,7 +64,7 @@
                         <h2 class="title">宫泽贤治诗集</h2>
                     </a>
                 </div>
-                <div class="col-lg-5 col-sm-12">
+                <div class="col-lg-5 col-sm-12 col-box">
                     <h2 id="column">专栏文章</h2>
                     <article class="article-card" onclick="location.href='#';">
                         <div class="img-box">
@@ -73,7 +73,7 @@
                         <div class="article-content">
                             <h3 class="article-title">今日推荐书籍:《挪威的森林》</h3>
                             <p class="article-text">
-                                    今天要为大家推荐一本小说《挪威的森林》作者村上春树，译者林少华。在读这本书前读到的是翻译者对这本书的看法和理解，介绍了很多作者本人写这本书的初衷，还有读者对这本的误解作者作出的解读。
+                                今天要为大家推荐一本小说《挪威的森林》作者村上春树，译者林少华。在读这本书前读到的是翻译者对这本书的看法和理解，介绍了很多作者本人写这本书的初衷，还有读者对这本的误解作者作出的解读。
                             </p>
                         </div>
                     </article>
@@ -84,7 +84,7 @@
                         <div class="article-content">
                             <h3 class="article-title">我们怎样读书</h3>
                             <p class="article-text">
-                                    在这个获取信息的方式异常多元和便捷的时代，为什么我们还要读书？因为通过电视或用其它的方式搜集的信息，即那种通过直观方式接受的知识，是最浅显、最粗疏且没有经过精密逻辑证明的东西，是值得存疑的东西，所以我们必须要读书。
+                                在这个获取信息的方式异常多元和便捷的时代，为什么我们还要读书？因为通过电视或用其它的方式搜集的信息，即那种通过直观方式接受的知识，是最浅显、最粗疏且没有经过精密逻辑证明的东西，是值得存疑的东西，所以我们必须要读书。
                             </p>
                         </div>
                     </article>
@@ -95,10 +95,11 @@
                         <div class="article-content">
                             <h3 class="article-title">推理小说的万恶之源,无法超越的里程碑,《罗杰疑案》</h3>
                             <p class="article-text">
-                                    《罗杰疑案》内容简介：金斯艾伯特村里坐落着两座豪宅，“皇家围场”是其中之一，而居住其中的弗拉尔斯太太刚刚过世。此后不久，她的情人，也就是住在另一所大宅里的罗杰·艾克罗伊德先生便得知，弗拉尔斯太太一年前杀害了自己的丈夫，最终因愧疚而自杀。
+                                《罗杰疑案》内容简介：金斯艾伯特村里坐落着两座豪宅，“皇家围场”是其中之一，而居住其中的弗拉尔斯太太刚刚过世。此后不久，她的情人，也就是住在另一所大宅里的罗杰·艾克罗伊德先生便得知，弗拉尔斯太太一年前杀害了自己的丈夫，最终因愧疚而自杀。
                             </p>
                         </div>
                     </article>
+                    <div class="more" onclick="location.href='#';">更多</div>
                 </div>
             </div>
         </div>
@@ -106,8 +107,25 @@
     </main>
 
     <footer>
-        <div class="footer">
-            <p>页脚还没做</p>
+        <div class="copyright">© 2023 All rights reserved. </div>
+        <div class="footer_custom_text">
+            <p>
+                <a style="margin-inline:5px" target="_blank"
+                    href="https://github.com/AyachiNenee/Ayachinenee.github.io">
+                    <img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp&logo=GitHub"
+                        data-lazy-src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp&logo=GitHub"
+                        title="本站项目由Github托管" data-ll-status="loaded" class="entered loaded"></a>
+                <a style="margin-inline:5px" target="_blank" href="https://vercel.com">
+                    <img src="https://img.shields.io/badge/Hosted-Vercel-black?style=flat&logo=Vercel"
+                        data-lazy-src="https://img.shields.io/badge/Hosted-Vercel-black?style=flat&logo=Vercel"
+                        title="本站部署于Vercel" data-ll-status="loaded" class="entered loaded"></a>
+                <a style="margin-inline:5px" target="_blank"
+                    href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img
+                        src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp&logo=Claris"
+                        data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp&logo=Claris"
+                        title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" data-ll-status="loaded"
+                        class="entered loaded"></a>
+            </p>
         </div>
     </footer>
 </body>

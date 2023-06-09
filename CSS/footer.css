@@ -1,5 +1,9 @@
 footer{
-    border-top: gainsboro solid 1px;
+    margin-top: 50px;
+    padding: 10px;
     text-align: center;
-    margin: auto;
+}
+footer p{
+    margin: 0;
+    padding: 0;
 }

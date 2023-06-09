@@ -1,9 +1,9 @@
-:root{
---very-dark-grayish-blue: hsl(217, 19%, 35%);
---desaturated-dark-blue:  hsl(214, 17%, 51%);
---light-grayish-blue:     hsl(210, 46%, 95%);
---grayish-blue:           hsl(212, 23%, 69%);
---white:                  hsl(0, 0%, 100%);
+:root {
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --white: hsl(0, 0%, 100%);
 }
 
 /*主页书籍展示框*/
@@ -65,6 +65,8 @@
 
 /*文章卡片*/
 .article-card {
+    position: relative;
+    left: 10px;
     cursor: pointer;
     display: grid;
     grid-template-columns: 200px minmax(300px, 445px);
@@ -73,10 +75,9 @@
     max-width: 550px;
     border-radius: 10px;
     box-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.1),
-        0 4px 8px rgba(0, 0, 0, 0.1),
-        0 8px 16px rgba(0, 0, 0, 0.1);
-
+        6px 6px 5px hsla(0, 0%, 0%, 0.02),
+        25px 25px 20px hsla(0, 0%, 0%, 0.03),
+        100px 100px 80px hsla(0, 0%, 0%, 0.05);
 }
 
 .img-box {
@@ -106,7 +107,8 @@
 }
 
 .article-text {
-    color: var(--desaturated-dark-blue);;
+    color: var(--desaturated-dark-blue);
+    ;
     font-size: 13px;
     line-height: 1.5;
     margin-bottom: 0px;
@@ -159,8 +161,12 @@
     }
 }
 
-
-
+.more {
+    text-align: center;
+    text-decoration: none;
+    color: var(--desaturated-dark-blue);
+    cursor: pointer;
+}
 
 #test {
     margin: 20px 0 10px 0;
