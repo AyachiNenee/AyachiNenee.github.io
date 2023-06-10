@@ -1,0 +1,360 @@
+body {
+    overflow-x: hidden;
+    background-color: white;
+
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+main {
+    margin: 0;
+
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header a.active {
+    color: red;
+}
+
+.sidebar a.active {
+    background-color: grey;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    font-size: 17px;
+    border-bottom: 1px solid gray;
+}
+
+header ul {
+    margin: 0;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    /* 使用 flex 布局 */
+    justify-content: flex-start;
+    /* 左对齐菜单项 */
+}
+
+header li {
+    padding: 0 25px;
+}
+
+header a {
+    display: block;
+    padding: 17px 10px;
+    color: #000;
+    font-family: "SimHei";
+    text-align: center;
+    text-decoration: none;
+}
+
+header a.active {
+    color: red;
+}
+
+header a:hover {
+    color: red;
+}
+
+
+header img {
+    height: 45px;
+    margin: 5px 50px 5px 100px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        height: auto;
+    }
+
+    header ul {
+        flex-direction: column;
+    }
+
+    header li {
+        padding: 10px 25px;
+    }
+}
+
+footer {
+    margin-top: 50px;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/*主页书籍展示框*/
+.book {
+    display: block;
+    width: 160px;
+    height: 250px;
+    margin: 5px 30px 5px 30px;
+    padding: auto;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    float: left;
+}
+
+/*书籍封面图片*/
+.book img {
+    width: 160px;
+    height: 230px;
+    border-radius: 5px;
+    float: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2);
+
+}
+
+/*书籍悬浮上升效果*/
+.book:hover {
+    position: relative;
+    transform: translateY(-5px);
+    transition: all 0.5s;
+}
+
+.book img:hover {
+    transition: all 0.5s;
+    box-shadow: 0 30px 70px -24px rgb(0 36 100 / 50%);
+}
+
+
+
+/*栏目名*/
+#recommendation {
+    text-align: left;
+    margin: 10px 10px 10px 25px;
+}
+
+#column {
+    text-align: left;
+    margin: 10px 10px 10px 20px;
+}
+
+/*书名*/
+.book h2 {
+    width: 160px;
+    height: 20px;
+    text-align: left;
+    font-size: 15px;
+    font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu
+}
+
+/*文章卡片*/
+.article-card {
+    position: relative;
+    left: 10px;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 200px minmax(300px, 445px);
+    grid-template-rows: 150px;
+    margin: 20px 10px 20px 0;
+    max-width: 550px;
+    border-radius: 10px;
+    box-shadow:
+        6px 6px 5px hsla(0, 0%, 0%, 0.02),
+        25px 25px 20px hsla(0, 0%, 0%, 0.03),
+        100px 100px 80px hsla(0, 0%, 0%, 0.05);
+}
+
+.img-box {
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+}
+
+.article-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.article-content {
+    background: white;
+    padding: 10px 20px;
+    border-radius: 0 10px 10px 0;
+
+}
+
+.article-title {
+    font-size: 17px;
+    color: var(--very-dark-grayish-blue);
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.article-text {
+    color: var(--desaturated-dark-blue);
+    ;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.article-card:hover {
+    position: relative;
+    transform: translateY(-5px);
+    transition: all 0.5s;
+    box-shadow: 0 30px 70px -24px rgb(0 36 100 / 50%);
+}
+
+@media screen and (max-width: 768px) {
+    .article-card {
+        margin: 10px auto;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 380px;
+    }
+
+    .img-box,
+    .article-content {
+        flex: 1;
+        border-radius: 5px;
+    }
+
+    .img-box {
+        height: 180px;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .article-content {
+        padding: 30px 28px 20px;
+    }
+
+    .article-title {
+        font-size: 15px;
+    }
+
+    .article-text {
+        margin-bottom: 30px;
+    }
+}
+
+.more {
+    text-align: center;
+    text-decoration: none;
+    color: var(--desaturated-dark-blue);
+    cursor: pointer;
+}
+
+#test {
+    margin: 20px 0 10px 0;
+}
+
+/*主页书籍展示框*/
+.book {
+    width: 160px;
+    height: 250px;
+    margin: 5px 30px 5px 30px;
+    padding: auto;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    float: left;
+}
+
+/*书籍封面图片*/
+.book img {
+    width: 160px;
+    height: 230px;
+    border-radius: 5px;
+    float: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2);
+
+}
+
+/*书籍悬浮上升效果*/
+.book:hover {
+    position: relative;
+    transform: translateY(-5px);
+    transition: all 0.5s;
+}
+
+.sub-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 50px auto;
+}
+
+/*侧边栏*/
+.sidebar {
+    width: 20%;
+    margin: 0px auto;
+    margin: 0;
+    padding: 0;
+    background-color: floralwhite;
+    border-radius: 10px;
+}
+
+.sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+
+.sidebar a.active {
+    background-color: grey;
+}
+
+/*书籍框*/
+.book-box {
+    width: 70%;
+    margin: 10px;
+    padding: 10px;
+}
+
+/*书籍信息*/
+.content {
+    width: 70%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.content .info {
+    height: 200px;
+}
+
+.content img {
+    float: left;
+}
