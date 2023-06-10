@@ -16,6 +16,7 @@ main {
     flex-wrap: wrap;
 }
 
+/*导航栏*/
 header a.active {
     color: red;
 }
@@ -37,9 +38,7 @@ header ul {
     overflow: hidden;
     background-color: white;
     display: flex;
-    /* 使用 flex 布局 */
     justify-content: flex-start;
-    /* 左对齐菜单项 */
 }
 
 header li {
@@ -83,6 +82,7 @@ header img {
     }
 }
 
+/*页脚*/
 footer {
     margin-top: 50px;
     padding: 10px;
@@ -102,7 +102,7 @@ footer p {
     --white: hsl(0, 0%, 100%);
 }
 
-/*主页书籍展示框*/
+/*首页书籍展示框*/
 .book {
     display: block;
     width: 160px;
@@ -140,7 +140,7 @@ footer p {
 
 
 
-/*栏目名*/
+/*首页栏目名*/
 #recommendation {
     text-align: left;
     margin: 10px 10px 10px 25px;
@@ -269,36 +269,7 @@ footer p {
     margin: 20px 0 10px 0;
 }
 
-/*主页书籍展示框*/
-.book {
-    width: 160px;
-    height: 250px;
-    margin: 5px 30px 5px 30px;
-    padding: auto;
-    border-radius: 5px;
-    text-decoration: none;
-    color: black;
-    text-align: center;
-    float: left;
-}
-
-/*书籍封面图片*/
-.book img {
-    width: 160px;
-    height: 230px;
-    border-radius: 5px;
-    float: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2);
-
-}
-
-/*书籍悬浮上升效果*/
-.book:hover {
-    position: relative;
-    transform: translateY(-5px);
-    transition: all 0.5s;
-}
-
+/*子页面盒子*/
 .sub-box {
     display: flex;
     flex-direction: row;
@@ -337,7 +308,7 @@ footer p {
     background-color: grey;
 }
 
-/*书籍框*/
+/*子页面书籍框*/
 .book-box {
     width: 70%;
     margin: 10px;
