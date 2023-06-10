@@ -1,19 +1,13 @@
 body {
     overflow-x: hidden;
     background-color: white;
-
     background-size: cover;
     background-repeat: repeat;
 }
 
 main {
     margin: 0;
-
-    width: 100%;
-    overflow: auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    padding: 0;
 }
 
 /*导航栏*/
@@ -271,21 +265,18 @@ footer p {
 
 /*子页面盒子*/
 .sub-box {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    margin: 50px 0;
 }
 
 /*侧边栏*/
 .sidebar {
-    width: 20%;
-    margin: 0px auto;
+    width: 80%;
     margin: 0;
     padding: 0;
-    background-color: floralwhite;
-    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+
 }
 
 .sidebar ul {
@@ -310,22 +301,43 @@ footer p {
 
 /*子页面书籍框*/
 .book-box {
-    width: 70%;
-    margin: 10px;
+    width: 90%;
     padding: 10px;
+    border-radius: 10px;
 }
 
 /*书籍信息*/
 .content {
-    width: 70%;
-    margin: 10px;
+    width: 90%;
     padding: 10px;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .content .info {
-    height: 200px;
+    display: flex;
 }
 
-.content img {
-    float: left;
+.content div {
+    padding: 10px;
+}
+
+/*文章*/
+.article {
+    width: 80%;
+    padding-left: 10%;
+}
+
+.article p {
+    line-height: 2.5;
+    text-align: justify;
+}
+
+.article .img {
+    text-align: center;
+}
+
+.article img {
+    height: 500px;
+    padding: 10px;
 }
