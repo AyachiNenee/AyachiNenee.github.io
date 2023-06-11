@@ -1,8 +1,69 @@
+:root {
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --white: hsl(0, 0%, 100%);
+    --grey-0: #fff;
+    --grey-1: #fdfdfd;
+    --grey-2: #f7f7f7;
+    --grey-3: #eff2f3;
+    --grey-4: #ccc;
+    --grey-5: #999;
+    --grey-6: #666;
+    --grey-7: #333;
+    --grey-8: #222;
+    --grey-9: #000;
+    --grey-1-a0: rgba(253, 253, 253, 0);
+    --grey-1-a7: rgba(253, 253, 253, 0.7);
+    --grey-1-a5: rgba(253, 253, 253, 0.5);
+    --grey-1-a3: rgba(253, 253, 253, 0.3);
+    --grey-9-a1: rgba(0, 0, 0, 0.1);
+    --grey-9-a5: rgba(0, 0, 0, 0.5);
+    --grey-2-a0: rgba(247, 247, 247, 0);
+    --color-pink-light: #ffe6fa;
+    --color-cyan-light: #e3fdf5;
+    --color-red: #e9546b;
+    --color-pink: #ed6ea0;
+    --color-orange: #ec8c69;
+    --color-yellow: #eab700;
+    --color-green: #0a7426;
+    --color-aqua: #3e999f;
+    --color-blue: #38a1db;
+    --color-purple: #9d5b8b;
+    --color-grey: #869194;
+    --color-red-a1: rgba(233, 84, 107, 0.1);
+    --color-red-a3: rgba(233, 84, 107, 0.3);
+    --color-pink-a3: rgba(237, 110, 160, 0.3);
+    --color-pink-light-a3: rgba(255, 230, 250, 0.3);
+    --color-pink-light-a5: rgba(255, 230, 250, 0.5);
+    --color-pink-light-a7: rgba(255, 230, 250, 0.7);
+    --body-bg-shadow: var(--grey-2);
+    --box-bg-shadow: var(--grey-9-a1);
+    --text-color: var(--grey-7);
+    --header-text-color: var(--grey-0);
+    --primary-color: var(--color-red);
+    --nav-bg: linear-gradient(-225deg, var(--color-cyan-light) 0, var(--color-pink-light) 100%)
+}
+
+@font-face {
+    font-family: 'ZCOOL KuaiLe';
+    src: url('../fonts/ZCOOLKuaiLe-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    overflow-x: hidden;
-    background-color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(247, 149, 51, 0.1) 0, rgba(243, 112, 85, 0.1) 15%, rgba(239, 78, 123, 0.1) 30%, rgba(161, 102, 171, 0.1) 44%, rgba(80, 115, 184, 0.1) 58%, rgba(16, 152, 173, 0.1) 72%, rgba(7, 179, 155, 0.1) 86%, rgba(109, 186, 130, 0.1) 100%);
     background-size: cover;
     background-repeat: repeat;
+    cursor: url(../images/default.cur), default;
 }
 
 main {
@@ -10,29 +71,34 @@ main {
     padding: 0;
 }
 
+a,
+img {
+    cursor: url(../images/pointer.cur), pointer;
+}
+
 /*导航栏*/
 header a.active {
     color: red;
 }
 
-.sidebar a.active {
-    background-color: grey;
-}
-
 header {
+    position: sticky;
+    z-index: 99;
+    top: 0px;
     width: 100%;
-    height: 60px;
     font-size: 17px;
-    border-bottom: 1px solid gray;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 5px 6px -5px rgba(133, 133, 133, 0.6);
 }
 
 header ul {
     margin: 0;
+    padding: 0;
     list-style-type: none;
     overflow: hidden;
-    background-color: white;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+
 }
 
 header li {
@@ -40,31 +106,36 @@ header li {
 }
 
 header a {
-    display: block;
-    padding: 17px 10px;
-    color: #000;
+    display: inline-block;
+    padding: 17px 10px 17px 10px;
+    color: #99a9bf;
     font-family: "SimHei";
     text-align: center;
     text-decoration: none;
+    border-bottom: 2px solid white;
+    transition: all 0.3s linear;
 }
 
 header a.active {
-    color: red;
+    color: var(--color-red);
+    border-bottom: 2px solid var(--color-red);
 }
 
 header a:hover {
-    color: red;
+    color: var(--color-red);
+    border-bottom: 2px solid var(--color-red);
+    transition: all 0.3s linear;
 }
-
 
 header img {
     height: 45px;
-    margin: 5px 50px 5px 100px;
+    margin: 5px 5px 5px 0px;
 }
 
 @media screen and (max-width: 768px) {
     header {
         height: auto;
+        position: relative;
     }
 
     header ul {
@@ -81,6 +152,8 @@ footer {
     margin-top: 50px;
     padding: 10px;
     text-align: center;
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: saturate(100%) blur(5px);
 }
 
 footer p {
@@ -88,13 +161,51 @@ footer p {
     padding: 0;
 }
 
-:root {
-    --very-dark-grayish-blue: hsl(217, 19%, 35%);
-    --desaturated-dark-blue: hsl(214, 17%, 51%);
-    --light-grayish-blue: hsl(210, 46%, 95%);
-    --grayish-blue: hsl(212, 23%, 69%);
-    --white: hsl(0, 0%, 100%);
+.top-box {
+    padding: 20px;
 }
+
+.top-box .top1 {
+    display: block;
+    height: 160px;
+    width: 450px;
+    padding: 0;
+    margin: 0px 20px;
+    border-radius: 10px;
+    background-image: url(../images/ban1.png);
+    background-size: cover;
+    box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.06);
+    transition: all 0.2s;
+}
+
+.top-box .top2 {
+    height: 160px;
+    width: 810px;
+    padding: 0;
+    border-radius: 10px;
+    background-image: url(../images/nene.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-color: var(--white);
+    box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.06);
+    color: var(--very-dark-grayish-blue);
+    font-size: 3em;
+    font-weight: normal;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+    text-align: center;
+
+}
+
+.top-box img {}
+
+.top-box .top1:hover {
+    box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.15);
+    transition: all 0.2s;
+    transform: scale(1.1)
+}
+
+
 
 /*首页书籍展示框*/
 .book {
@@ -108,6 +219,8 @@ footer p {
     color: black;
     text-align: center;
     float: left;
+    color: var(--very-dark-grayish-blue);
+    transition: all 0.4s;
 }
 
 /*书籍封面图片*/
@@ -116,31 +229,35 @@ footer p {
     height: 230px;
     border-radius: 5px;
     float: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2);
-
+    box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.06)
 }
 
 /*书籍悬浮上升效果*/
 .book:hover {
     position: relative;
-    transform: translateY(-5px);
-    transition: all 0.5s;
+    transform: translateY(-7px);
+    transition: all 0.4s;
 }
 
 .book img:hover {
-    transition: all 0.5s;
-    box-shadow: 0 30px 70px -24px rgb(0 36 100 / 50%);
+    transition: all 0.3s;
+    box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.15)
 }
-
-
 
 /*首页栏目名*/
 #recommendation {
+    color: #4C4948;
+    font-size: 1.5em;
+    font-family: Mulish, 'Noto Serif SC', 'Noto Serif JP', Mulish, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
     text-align: left;
     margin: 10px 10px 10px 25px;
 }
 
 #column {
+    color: #4C4948;
+    font-size: 1.5em;
+    font-family: Mulish, 'Noto Serif SC', 'Noto Serif JP', Mulish, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    ;
     text-align: left;
     margin: 10px 10px 10px 20px;
 }
@@ -158,7 +275,7 @@ footer p {
 .article-card {
     position: relative;
     left: 10px;
-    cursor: pointer;
+    cursor: url(../images/pointer.cur), pointer;
     display: grid;
     grid-template-columns: 200px minmax(300px, 445px);
     grid-template-rows: 150px;
@@ -169,6 +286,7 @@ footer p {
         6px 6px 5px hsla(0, 0%, 0%, 0.02),
         25px 25px 20px hsla(0, 0%, 0%, 0.03),
         100px 100px 80px hsla(0, 0%, 0%, 0.05);
+    transition: all 0.4s;
 }
 
 .img-box {
@@ -199,7 +317,6 @@ footer p {
 
 .article-text {
     color: var(--desaturated-dark-blue);
-    ;
     font-size: 13px;
     line-height: 1.5;
     margin-bottom: 0px;
@@ -212,9 +329,9 @@ footer p {
 
 .article-card:hover {
     position: relative;
-    transform: translateY(-5px);
-    transition: all 0.5s;
-    box-shadow: 0 30px 70px -24px rgb(0 36 100 / 50%);
+    transform: scale(1.1);
+    transition: all 0.3s;
+    box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.15)
 }
 
 @media screen and (max-width: 768px) {
@@ -256,27 +373,26 @@ footer p {
     text-align: center;
     text-decoration: none;
     color: var(--desaturated-dark-blue);
-    cursor: pointer;
-}
-
-#test {
-    margin: 20px 0 10px 0;
+    cursor: url(../images/pointer.cur), pointer;
 }
 
 /*子页面盒子*/
 .sub-box {
     display: grid;
     grid-template-columns: 3fr 7fr;
-    margin: 50px 0;
+    margin: 50px;
 }
 
 /*侧边栏*/
 .sidebar {
     width: 80%;
-    margin: 0;
+    height: 600px;
+    margin: 0 0 0 10%;
     padding: 0;
-    background-color: rgb(255, 255, 255);
-
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.06);
+    transition: all 0.3s;
 }
 
 .sidebar ul {
@@ -288,15 +404,30 @@ footer p {
 .sidebar a {
     display: block;
     padding: 15px 16px;
-    border-radius: 10px;
+    border-radius: 8px;
     text-decoration: none;
     text-align: center;
-    color: black;
+    color: var(--grey-6);
     font-size: 20px;
+    transition: all 0.1s linear;
+}
+
+.sidebar:hover {
+    transition: all 0.3s;
+    box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.15);
+}
+
+.sidebar a:hover {
+    background-color: rgb(215, 215, 215);
+    font-size: 1.2em;
+    transform: scale(1.2);
+    transition: all 0.3s linear;
 }
 
 .sidebar a.active {
-    background-color: grey;
+    color: var(--grey-0);
+    background-image: linear-gradient(to right, var(--color-pink) 0, var(--color-orange) 100%);
+    box-shadow: 0 0 0.75rem var(--color-pink-a3);
 }
 
 /*子页面书籍框*/
@@ -309,9 +440,11 @@ footer p {
 /*书籍信息*/
 .content {
     width: 90%;
-    padding: 10px;
+    padding: 4%;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.06);
+    transition: all 0.2s;
 }
 
 .content .info {
@@ -322,10 +455,23 @@ footer p {
     padding: 10px;
 }
 
+.content:hover {
+    box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.15);
+    transition: all 0.2s;
+}
+
+.content a {
+    color: #00C4B6;
+}
+
 /*文章*/
 .article {
     width: 80%;
-    padding-left: 10%;
+    padding: 4%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.06);
+    transition: all 0.2s;
 }
 
 .article p {
@@ -338,6 +484,11 @@ footer p {
 }
 
 .article img {
-    height: 500px;
-    padding: 10px;
+    width: 50%;
+    padding: 2%;
+}
+
+.article:hover {
+    box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.15);
+    transition: all 0.2s;
 }
