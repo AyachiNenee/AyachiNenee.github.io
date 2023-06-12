@@ -128,7 +128,8 @@ header a:hover {
 }
 
 header img {
-    height: 45px;
+    width: 50px;
+    height: 50px;
     margin: 5px 5px 5px 0px;
 }
 
@@ -154,12 +155,12 @@ footer {
     text-align: center;
     background-color: rgba(255, 255, 255, .15);
     backdrop-filter: saturate(100%) blur(5px);
+    color: var(--grey-5);
 }
 
-footer p {
-    margin: 0;
-    padding: 0;
-}
+footer a {}
+
+
 
 .top-box {
     padding: 20px;
@@ -168,9 +169,11 @@ footer p {
 .top-box .top1 {
     display: block;
     height: 160px;
-    width: 450px;
+    width: 29%;
     padding: 0;
     margin: 0px 20px;
+    position: relative;
+    left: 9%;
     border-radius: 10px;
     background-image: url(../images/ban1.png);
     background-size: cover;
@@ -180,26 +183,31 @@ footer p {
 
 .top-box .top2 {
     height: 160px;
-    width: 810px;
-    padding: 0;
+    width: 50%;
+    padding: 1%;
+    position: relative;
+    left: 10%;
     border-radius: 10px;
     background-image: url(../images/nene.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 100%;
-    background-color: var(--white);
-    box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.06);
+    background-color: rgb(255 255 255 / 60%);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0px 0px 1px rgba(7, 17, 27, 0.06);
     color: var(--very-dark-grayish-blue);
-    font-size: 3em;
+    font-size: 1.7em;
     font-weight: normal;
     font-family: 'ZCOOL KuaiLe', sans-serif;
-    text-align: center;
+    text-align: left;
+    transition: all 0.2s;
 
 }
 
 .top-box img {}
 
-.top-box .top1:hover {
+.top-box .top1:hover,
+.top2:hover {
     box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.15);
     transition: all 0.2s;
     transform: scale(1.1)
@@ -290,8 +298,14 @@ footer p {
 }
 
 .img-box {
+    padding: 10px;
     border-radius: 10px 0 0 10px;
     overflow: hidden;
+    background-color: white;
+}
+
+.img-box img {
+    border-radius: 5px;
 }
 
 .article-banner {
