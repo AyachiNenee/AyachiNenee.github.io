@@ -1,3 +1,6 @@
+@import url(https://cdn.jsdelivr.net/gh/satouriko/LxgwWenKai_Webfonts@v1.101/dist/LXGWWenKai-Regular.css);
+@import url(https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.css);
+
 :root {
     --very-dark-grayish-blue: hsl(217, 19%, 35%);
     --desaturated-dark-blue: hsl(214, 17%, 51%);
@@ -14,13 +17,6 @@
     --grey-7: #333;
     --grey-8: #222;
     --grey-9: #000;
-    --grey-1-a0: rgba(253, 253, 253, 0);
-    --grey-1-a7: rgba(253, 253, 253, 0.7);
-    --grey-1-a5: rgba(253, 253, 253, 0.5);
-    --grey-1-a3: rgba(253, 253, 253, 0.3);
-    --grey-9-a1: rgba(0, 0, 0, 0.1);
-    --grey-9-a5: rgba(0, 0, 0, 0.5);
-    --grey-2-a0: rgba(247, 247, 247, 0);
     --color-pink-light: #ffe6fa;
     --color-cyan-light: #e3fdf5;
     --color-red: #e9546b;
@@ -32,23 +28,6 @@
     --color-blue: #38a1db;
     --color-purple: #9d5b8b;
     --color-grey: #869194;
-    --color-red-a1: rgba(233, 84, 107, 0.1);
-    --color-red-a3: rgba(233, 84, 107, 0.3);
-    --color-pink-a3: rgba(237, 110, 160, 0.3);
-    --color-pink-light-a3: rgba(255, 230, 250, 0.3);
-    --color-pink-light-a5: rgba(255, 230, 250, 0.5);
-    --color-pink-light-a7: rgba(255, 230, 250, 0.7);
-    --body-bg-shadow: var(--grey-2);
-    --box-bg-shadow: var(--grey-9-a1);
-    --text-color: var(--grey-7);
-    --header-text-color: var(--grey-0);
-    --primary-color: var(--color-red);
-    --nav-bg: linear-gradient(-225deg, var(--color-cyan-light) 0, var(--color-pink-light) 100%)
-}
-
-@font-face {
-    font-family: 'ZCOOL KuaiLe';
-    src: url('../fonts/ZCOOLKuaiLe-Regular.ttf');
 }
 
 * {
@@ -56,11 +35,21 @@
     padding: 0;
 }
 
+*::-moz-selection {
+    background: #00c4b6;
+    color: #f7f7f7;
+}
+
+*::selection {
+    background: #00c4b6;
+    color: #f7f7f7;
+}
+
 body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background: linear-gradient(90deg, rgba(247, 149, 51, 0.1) 0, rgba(243, 112, 85, 0.1) 15%, rgba(239, 78, 123, 0.1) 30%, rgba(161, 102, 171, 0.1) 44%, rgba(80, 115, 184, 0.1) 58%, rgba(16, 152, 173, 0.1) 72%, rgba(7, 179, 155, 0.1) 86%, rgba(109, 186, 130, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(109, 186, 130, 0.1) 0, rgba(7, 179, 155, 0.1) 15%, rgba(16, 152, 173, 0.1) 30%, rgba(80, 115, 184, 0.1) 44%, rgba(161, 102, 171, 0.1) 58%, rgba(239, 78, 123, 0.1) 72%, rgba(243, 112, 85, 0.1) 86%, rgba(247, 149, 51, 0.1) 100%);
     background-size: cover;
     background-repeat: repeat;
     cursor: url(../images/default.cur), default;
@@ -78,7 +67,7 @@ img {
 
 /*导航栏*/
 header a.active {
-    color: red;
+    color: #49b1f5;
 }
 
 header {
@@ -87,7 +76,7 @@ header {
     top: 0px;
     width: 100%;
     font-size: 17px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 80%);
     box-shadow: 0 5px 6px -5px rgba(133, 133, 133, 0.6);
 }
 
@@ -98,7 +87,6 @@ header ul {
     overflow: hidden;
     display: flex;
     justify-content: center;
-
 }
 
 header li {
@@ -112,18 +100,18 @@ header a {
     font-family: "SimHei";
     text-align: center;
     text-decoration: none;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid rgba(255, 255, 255, 80%);
     transition: all 0.3s linear;
 }
 
 header a.active {
-    color: var(--color-red);
-    border-bottom: 2px solid var(--color-red);
+    color: #49b1f5;
+    border-bottom: 2px solid #49b1f5;
 }
 
 header a:hover {
-    color: var(--color-red);
-    border-bottom: 2px solid var(--color-red);
+    color: #49b1f5;
+    border-bottom: 2px solid #49b1f5;
     transition: all 0.3s linear;
 }
 
@@ -135,16 +123,10 @@ header img {
 
 @media screen and (max-width: 768px) {
     header {
+        display: flex;
+        justify-content: center;
         height: auto;
         position: relative;
-    }
-
-    header ul {
-        flex-direction: column;
-    }
-
-    header li {
-        padding: 10px 25px;
     }
 }
 
@@ -158,10 +140,6 @@ footer {
     color: var(--grey-5);
 }
 
-footer a {}
-
-
-
 .top-box {
     padding: 20px;
 }
@@ -169,42 +147,58 @@ footer a {}
 .top-box .top1 {
     display: block;
     height: 160px;
-    width: 29%;
-    padding: 0;
-    margin: 0px 20px;
+    width: 40%;
+    padding: 1%;
+    margin: 0px;
     position: relative;
-    left: 9%;
+    left: 0%;
+    background-color: #fef9e7;
     border-radius: 10px;
-    background-image: url(../images/ban1.png);
-    background-size: cover;
     box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.06);
     transition: all 0.2s;
+    color: black;
+    font-size: 1.1em;
+    font-weight: normal;
+    font-family: LXGWWenKai, sans-serif;
+    text-align: left;
+    overflow: hidden;
+}
+
+.top-box .top1 span {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.top-box .top1 p {
+    position: relative;
+    text-align: left;
+    padding-left: 7%;
 }
 
 .top-box .top2 {
     height: 160px;
-    width: 50%;
+    width: 56%;
     padding: 1%;
+    left: 2%;
     position: relative;
-    left: 10%;
     border-radius: 10px;
-    background-image: url(../images/nene.png);
+    background-image: url(../images/top2.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 100%;
-    background-color: rgb(255 255 255 / 60%);
-    backdrop-filter: blur(4px);
-    box-shadow: 0 0px 0px 1px rgba(7, 17, 27, 0.06);
-    color: var(--very-dark-grayish-blue);
-    font-size: 1.7em;
+    background-color: #e0eafc;
+    background-color: -webkit-linear-gradient(to right, rgb(224, 234, 252), rgb(207, 222, 243));
+    background-color: linear-gradient(to right, rgb(224, 234, 252), rgb(207, 222, 243));
+    box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.06);
+    transition: all 0.2s;
+    color: black;
+    font-size: 1.8em;
     font-weight: normal;
-    font-family: 'ZCOOL KuaiLe', sans-serif;
+    font-family: LXGWWenKai, sans-serif;
     text-align: left;
     transition: all 0.2s;
-
+    overflow: hidden;
 }
-
-.top-box img {}
 
 .top-box .top1:hover,
 .top2:hover {
@@ -213,6 +207,11 @@ footer a {}
     transform: scale(1.1)
 }
 
+@media screen and (max-width: 768px) {
+    .top-box {
+        font-size: 50%;
+    }
+}
 
 
 /*首页书籍展示框*/
@@ -265,7 +264,6 @@ footer a {}
     color: #4C4948;
     font-size: 1.5em;
     font-family: Mulish, 'Noto Serif SC', 'Noto Serif JP', Mulish, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-    ;
     text-align: left;
     margin: 10px 10px 10px 20px;
 }
@@ -276,7 +274,7 @@ footer a {}
     height: 20px;
     text-align: left;
     font-size: 15px;
-    font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu
+    font-family: Mulish, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 /*文章卡片*/
@@ -407,6 +405,7 @@ footer a {}
     border-radius: 10px;
     box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.06);
     transition: all 0.3s;
+    font-family: Mulish, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 .sidebar ul {
@@ -440,8 +439,9 @@ footer a {}
 
 .sidebar a.active {
     color: var(--grey-0);
-    background-image: linear-gradient(to right, var(--color-pink) 0, var(--color-orange) 100%);
-    box-shadow: 0 0 0.75rem var(--color-pink-a3);
+    background: #36d1dc;
+    background: -webkit-linear-gradient(to right, rgb(54, 209, 220), rgb(91, 134, 229));
+    background: linear-gradient(to right, rgb(54, 209, 220), rgb(91, 134, 229));
 }
 
 /*子页面书籍框*/
@@ -459,6 +459,7 @@ footer a {}
     border-radius: 8px;
     box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.06);
     transition: all 0.2s;
+    font-family: Mulish, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 .content .info {
@@ -486,6 +487,8 @@ footer a {}
     border-radius: 8px;
     box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.06);
     transition: all 0.2s;
+    font-size: 1.2em;
+    font-family: LXGWWenKai, Mulish, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 .article p {
@@ -505,4 +508,36 @@ footer a {}
 .article:hover {
     box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.15);
     transition: all 0.2s;
+}
+
+.about-box {
+    display: flex;
+    justify-content: center;
+}
+
+.about {
+    width: 80%;
+    height: 700px;
+    margin: 50px;
+    padding: 5%;
+    background-color: rgba(255, 255, 255, 60%);
+    background-image: url(../images/bg.png);
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.06);
+    transition: all 0.3s;
+    color: var(--grey-8);
+    font-size: 1.2em;
+    font-weight: 600;
+    font-family: LXGWWenKai, Mulish, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.about-content {
+    width: 50%;
+    height: 100%;
+}
+
+.about:hover {
+    transition: all 0.3s;
+    box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.15);
 }
