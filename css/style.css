@@ -125,8 +125,16 @@ header img {
     header {
         display: flex;
         justify-content: center;
-        height: auto;
+        height: 57px;
         position: relative;
+    }
+
+    header span {
+        visibility: hidden;
+    }
+
+    header a {
+        height: 50%;
     }
 }
 
